@@ -12,7 +12,7 @@
 	}
 
 	$HTML .= '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">';
-
+	
 	wp_enqueue_style( 'style', getTema()."/style.css", array(), "1.0.0" );
 
 	wp_enqueue_style( 'generales_css', getTema()."/css/generales.css", array(), "1.0.0" );
@@ -25,13 +25,15 @@
 
 	wp_head(); 
 
+	include_once( 'partes/head/script_google_auth.php' );
+	include_once( 'partes/head/script_facebook_auth.php' );
+
 	$HTML .= '
 		<script type="text/javascript"> 
 			var HOME = "'.getTema().'/"; 
 			var RAIZ = "'.get_home_url().'/"; 
 			var pines = []; 
 		</script>
-
 	</head>
 
 	<body class="'.join( ' ', get_body_class( $class ) ).'" >';
@@ -107,6 +109,30 @@
 		                		<span id='login_submit'>Recuperar</span>
 		                	</div>
 		                </form>
+
+						
+						<hr>
+
+						<button id=\"customBtn\" class=\"customGPlusSignIn\">
+							<span class=\"icon\"></span>
+							<span class=\"buttonText\">Google</span>
+						</button>
+						<div id=\"google_auth_id\"></div>
+						<script>startApp();</script>
+						<br>
+						<br>
+						<br>
+
+						<fb:login-button scope=\"public_profile,email\" onlogin=\"checkLoginState();\"></fb:login-button>
+						<div id=\"status\"></div>
+						<br>
+						<br>
+						<br>
+
+						<button onclick=\"login_facebook();\">Iniciar on Facebook</button>
+						<br>
+						<br>
+						<br>
 
 		            </div>
 		        </div>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KMIMOS</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" >
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/datepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="css/kmimos_style.css">
+	</head>
+	<body>
+		<!-- SECCIÓN MENU -->
+		<nav class="navbar navbar-fixed-top bg-transparent nav-sesion">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<img class="km-avatar" src="images/km-navbar-mobile.svg" width="40">
+					</button>
+					<a class="navbar-brand" href="index-sesion.html"><img src="images/km-logos/km-logo.png" height="60"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/km-sesion-cliente/avatar.png"></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">MI PERFIL</a></li>
+								<li><a href="#">MIS MASCOTAS</a></li>
+								<li><a href="#">HISTORIAL</a></li>
+								<li><a href="#">MIS SOLICITUDES</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="index.html">CERRAR SESIÓN</a></li>
+							</ul>
+						</li>
+						<li><a href="#" class="km-nav-link hidden-sm hidden-md hidden-lg">MI PERFIL</a></li>
+						<li><a href="#" class="km-nav-link hidden-sm hidden-md hidden-lg">MIS MASCOTAS</a></li>
+						<li><a href="#" class="km-nav-link hidden-sm hidden-md hidden-lg">HISTORIAL</a></li>
+						<li><a href="#" class="km-nav-link hidden-sm hidden-md hidden-lg">MIS SOLICITUDES</a></li>
+						<li><a href="index.html" class="km-nav-link hidden-sm hidden-md hidden-lg">CERRAR SESIÓN</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- FIN SECCIÓN MENU -->
+		<!-- SECCIÓN 1 -->
+		<!-- SECCIÓN 1 - PARTE VIDEO -->
+		<div class="km-video">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="km-video-bg">
+						<div class="overlay"></div>
+						<video loop muted autoplay poster="images/km-hero-desktop.jpg" class="km-video-bgscreen">
+							<source src="videos/km-home/km-video.webm" type="video/webm">
+							<source src="videos/km-home/km-video.mp4" type="video/mp4">
+							<source src="videos/km-home/km-video.ogv" type="video/ogg">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN 1 - PARTE VIDEO -->
+		
+		<!-- SECCIÓN 2 - PARTE FORMULARIO CUIDADOR -->
+		<div class="km-credibilidad">
+			<div class="container">
+				<div class="km-credibilidad-titular">
+					<p>A LA FAMILIA SE LE CUIDA, POR ELLO LE DAMOS A TU MASCOTA CUIDADO Y AMOR</p>
+					<h2>tu mascota regresa feliz</h2>
+				</div>
+			</div>
+			<div class="km-cuidador">
+				<div class="container">
+					<div class="km-formulario-cuidador">
+						<div class="row km-fechas">
+							<div class="col-xs-12 col-sm-6">
+								<select class="km-select-custom km-select-ubicacion" name="">
+									<option>UBICACIÓN, ESTADO, MUNICIPIO</option>
+									<option>UBICACIÓN, A</option>
+									<option>UBICACIÓN, B</option>
+								</select>
+							</div>
+							<div class="col-xs-12 col-sm-3">
+								<input type="text" name="" placeholder="DESDE CUANDO" value="" class="date_from">
+							</div>
+							<div class="col-xs-12 col-sm-3">
+								<input type="text" name="" placeholder="HASTA CUANDO" value="" class="date_to">
+							</div>
+						</div>
+						<div class="row km-servicios mtb-10">
+							<div class="col-xs-12 col-sm-3">
+								<div class="km-opcion"><img src="images/icon/icon-hospedaje.svg">HOSPEDAJE DÍA Y NOCHE</div>
+							</div>
+							<div class="col-xs-12 col-sm-3">
+								<div class="km-opcion"><img src="images/icon/icon-guarderia.svg">GUARDERÍA DÍA</div>
+							</div>
+							<div class="col-xs-12 col-sm-3">
+								<div class="km-opcion"><img src="images/icon/icon-paseo.svg">PASEOS</div>
+							</div>
+							<div class="col-xs-12 col-sm-3">
+								<div class="km-opcion"><img src="images/icon/icon-entrenamiento.svg">ENTRENAMIENTO</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-9">
+								<div class="row km-tamanio">
+									<div class="col-xs-6 col-sm-3">
+										<div class="km-opcion"><img src="images/icon/icon-pequenio.svg"><div class="km-opcion-text"><b>PEQUEÑO</b><br>0 a 25 cm</div></div>
+									</div>
+									<div class="col-xs-6 col-sm-3">
+										<div class="km-opcion"><img src="images/icon/icon-mediano.svg"><div class="km-opcion-text"><b>MEDIANO</b><br>25 a 58cm</div></div>
+									</div>
+									<div class="col-xs-6 col-sm-3">
+										<div class="km-opcion"><img src="images/icon/icon-grande.svg"><div class="km-opcion-text"><b>GRANDE</b><br>58 a 73 cm</div></div>
+									</div>
+									<div class="col-xs-6 col-sm-3">
+										<div class="km-opcion"><img src="images/icon/icon-gigante.svg"><div class="km-opcion-text"><b>GIGANTE</b><br>73 a 200 cm</div></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-3 pd5">
+								<a href="#popup-servicios" class="km-btn-primary" role="button" data-toggle="modal">ENCONTRAR CUIDADOR</a>
+								<div id="popup-servicios" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h4><b>RECOMPENSA A TU MASCOTA. INCLUYE UN SERVICIO ADICIONAL</b></h4>
+											<div class="km-servicios-adicionales">
+												<div class="row">
+													<div class="col-xs-12 col-sm-3">
+														<div class="km-opcion"><img src="images/icon/icon-corteypelo.svg"><div class="km-opcion-text">CORTE DE<br> PELO Y UÑAS</div></div>
+													</div>
+													<div class="col-xs-12 col-sm-3">
+														<div class="km-opcion"><img src="images/icon/icon-banoyseco.svg"><div class="km-opcion-text">BAÑO<br> Y SECADO</div></div>
+													</div>
+													<div class="col-xs-12 col-sm-3">
+														<div class="km-opcion"><img src="images/icon/icon-dental.svg"><div class="km-opcion-text">LIMPIEZA<br> DENTAL</div></div>
+													</div>
+													<div class="col-xs-12 col-sm-3">
+														<div class="km-opcion"><img src="images/icon/icon-veterinario.svg"><div class="km-opcion-text">VISITA AL<br> VETERINARIO</div></div>
+													</div>
+												</div>
+												<div class="row mtb-10">
+													<div class="col-xs-12 col-sm-3">
+														<div class="km-opcion"><img src="images/icon/icon-acupuntura.svg"><div class="km-opcion-text">ACUPUNTURA</div></div>
+													</div>
+													<div class="col-xs-12 col-sm-3">
+														<div class="km-opcion"><img src="images/icon/icon-transportesencillo.svg"><div class="km-opcion-text">TRANSPORTE<br> SENCILLO</div></div>
+													</div>
+													<div class="col-xs-12 col-sm-3">
+														<div class="km-opcion"><img src="images/icon/icon-transporteredondo.svg"><div class="km-opcion-text">TRANSPORTE<br> REDONDO</div></div>
+													</div>
+													<div class="col-xs-12 col-sm-3">
+														<a href="km-resultado.html" class="km-btn-primary" style="height: 70px; line-height: 40px;">AGREGAR SERVICIO</a>
+													</div>
+												</div>
+											</div>
+											<a class="km-link" href="km-resultado.html" style="color: black; display:block; margin-top: 30px;">NO DESEO POR AHORA, GRACIAS</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN 1 - PARTE FORMULARIO CUIDADOR -->
+		<!-- FIN SECCIÓN 1 -->
+		<!-- SECCIÓN 2 - BENEFICIOS -->
+		<div class="km-beneficios">
+			<div class="container">
+				<h4><div style="font-family: 'Gotham-Pro-Black'; display: inline-block;">BENEFICIOS</div> DE DEJAR A TU MASCOTA CON CUIDADORES CERTIFICADOS</h4>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<div class="row">
+							<div class="col-xs-4 col-sm-12 km-beneficios-icon">
+								<img src="images/km-certificado.svg">
+							</div>
+							<div class="col-xs-8 col-sm-12">
+								<div class="km-beneficios-text">
+									<h5>CUIDADORES CERTIFICADOS</h5>
+									<p>Certificación bajo estándares internacionales. Respaldando su integridad y experiencia con perros. Siendo capacitados también en la <a class="km-link" href="#">Academia Kmimos.</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="row">
+							<div class="col-xs-4 col-sm-12 km-beneficios-icon">
+								<img src="images/km-veterinaria.svg">
+							</div>
+							<div class="col-xs-8 col-sm-12">
+								<div class="km-beneficios-text">
+									<h5>COBERTURA VETERINARIA</h5>
+									<p>Sabemos tu mascota es un integrante de tu familia. Ten la certeza recibirá el cuidado necesario, teniendo cobertura contra accidentes durante su estadía.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="row">
+							<div class="col-xs-4 col-sm-12 km-beneficios-icon">
+								<img src="images/km-fotografia.svg">
+							</div>
+							<div class="col-xs-8 col-sm-12">
+								<div class="km-beneficios-text">
+									<h5>FOTOGRAFÍAS Y VIDEOS DIARIOS</h5>
+									<p>Acercando distancias entre tu mascota y tú. Kmimos monitorea a los cuidadores asociados asegurando la mejor experiencia para ambos.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN 2 - BENEFICIOS -->
+		<!-- SECCIÓN 3 - TESTIMONIALES -->
+		<div class="km-testimoniales">
+			<div class="container-fluid">
+				<div class="row">
+					<ul class="bxslider">
+						<li>
+							<div>
+								<div class="overlay"></div>
+								<div class="km-testimonial-text">
+									<div class="km-video-testimonial">
+										<a href="Javascript: void(0);" onclick="playVideo(this)"><img src="images/icon/icon-video.svg" width="55"></a>
+									</div>
+									<div class="km-testimonial">“Llegan como huéspedes y se van como mis amigos, lo importante es hacerlos sentir en su hogar”</div>
+									<div class="km-autor">JUAN RODRÍGUEZ - México D.F</div>
+									<div class="km-autor-descripcion">Cuidador Certificado</div>
+								</div>
+								<video>
+									<source src="videos/km-home/km-video.webm" type="video/webm">
+									<source src="videos/km-home/km-video.mp4" type="video/mp4">
+									<source src="videos/km-home/km-video.ogv" type="video/ogg">
+								</video>
+								<img class="img-testimoniales" src="images/km-testimoniales/testimonial-1.jpg">
+							</div>
+						</li>
+						<li>
+							<div>
+								<div class="overlay"></div>
+								<div class="km-testimonial-text">
+									<div class="km-video-testimonial">
+										<a href="Javascript: void(0);" onclick="playVideo(this)"><img src="images/icon/icon-video.svg" width="55"></a>
+									</div>
+									<div class="km-testimonial">“Llegan como huéspedes y se van como mis amigos, lo importante es hacerlos sentir en su hogar”</div>
+									<div class="km-autor">JUAN RODRÍGUEZ - México D.F</div>
+									<div class="km-autor-descripcion">Cuidador Certificado</div>
+								</div>
+								<video>
+									<source src="videos/km-home/km-video.webm" type="video/webm">
+									<source src="videos/km-home/km-video.mp4" type="video/mp4">
+									<source src="videos/km-home/km-video.ogv" type="video/ogg">
+								</video>
+								<img class="img-testimoniales" src="images/km-testimoniales/testimonial-2.jpg">
+							</div>
+						</li>
+						<li>
+							<div>
+								<div class="overlay"></div>
+								<div class="km-testimonial-text">
+									<div class="km-video-testimonial">
+										<a href="Javascript: void(0);" onclick="playVideo(this)"><img src="images/icon/icon-video.svg" width="55"></a>
+									</div>
+									<div class="km-testimonial">“Llegan como huéspedes y se van como mis amigos, lo importante es hacerlos sentir en su hogar”</div>
+									<div class="km-autor">JUAN RODRÍGUEZ - México D.F</div>
+									<div class="km-autor-descripcion">Cuidador Certificado</div>
+								</div>
+								<video>
+									<source src="videos/km-home/km-video.webm" type="video/webm">
+									<source src="videos/km-home/km-video.mp4" type="video/mp4">
+									<source src="videos/km-home/km-video.ogv" type="video/ogg">
+								</video>
+								<img class="img-testimoniales" src="images/km-testimoniales/testimonial-3.jpg">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN 3 - TESTIMONIALES -->
+		<!-- SECCIÓN 4 - CLUB PATITAS FELICES -->
+		<div class="km-club">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3">
+						<img src="images/club-patita.svg" width="100%" style="max-width: 200px;">
+						<h4 style="margin-top: 35px;"><span>Cada amigo que complete 1 reservación</span> GANA $150 Y TÚ GANAS OTROS $150</h4>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<h4>CLUB DE LAS</h4>
+						<h2>Patitas Felices</h2>
+						<div class="km-box-form">
+							<div class="content-placeholder">
+								<div class="label-placeholder">
+									<label>Nombres y apellidos</label>
+									<input type="text" name="" value="" class="input-label-placeholder">
+								</div>
+								<div class="label-placeholder">
+									<label>E-mail</label>
+									<input type="password" name="" value="" class="input-label-placeholder">
+								</div>
+							</div>
+						</div>
+						<a href="#" class="km-btn-primary">INSCRÍBETE Y GANA</a>
+					</div>
+					<div class="hidden-xs col-sm-3">
+						<img src="images/km-club-perro.jpg" width="100%">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN 4 - CLUB PATITAS FELICES -->
+		<!-- SECCIÓN 5 - VACACIONES -->
+		<div class="km-vacaciones">
+			<div class="container">
+				<p>NOSOTROS NOS ENCARGAMOS DE TU MASCOTA, TÚ LIBÉRATE.</p>
+				<h2>Vacations Mode On</h2>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<a href="#" style="background-color: white;"><img src="images/km-logos/logo-hotel.jpg"></a>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<a href="#" style="background-color: black;"><img src="images/km-logos/logo-volaris.jpg"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN 5 - VACACIONES -->
+		<!-- SECCIÓN 6 - BENEFICIOS -->
+		<div class="km-medios">
+			<div class="container">
+				<h4>NUESTRO RESPALDO</h4>
+				<div class="row">
+					<div class="col-xs-6 col-md-offset-1 col-md-2">
+						<img src="images/km-medios/reforma.jpg">
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<img src="images/km-medios/mural.jpg">
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<img src="images/km-medios/norte.jpg">
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<img src="images/km-medios/financiero.jpg">
+					</div>
+					<div class="col-xs-12 col-md-2">
+						<img src="images/km-medios/universal.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN 6 - BENEFICIOS -->
+		<!-- SECCIÓN 7 - BENEFICIOS -->
+		<div class="km-beneficios">
+			<div class="container">
+				<h4>KMIMOS TE OFRECE</h4>
+				<div class="row">
+					<div class="col-xs-4">
+						<div class="km-beneficios-icon">
+							<img src="images/km-pago.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">PAGO EN EFECTIVO O CON TARJETA</h5>
+						</div>
+					</div>
+					<div class="col-xs-4 brd-lr">
+						<div class="km-beneficios-icon">
+							<img src="images/km-certificado.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">CUIDADORES CERTIFICADOS</h5>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="km-beneficios-icon">
+							<img src="images/km-veterinaria.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">COBERTURA VETERINARIA</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN 7 - BENEFICIOS -->
+		<!-- SECCIÓN FOOTER -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<h5>ENTÉRATE DE LOS ÚLTIMOS CUIDADOS PARA TU MASCOTA</h5>
+						<p>¡Inscríbete a nuestro blog y conócelas!</p>
+						<div class="km-inscripcion">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Ingresa tu correo">
+								<span class="input-group-btn">
+									<button class="btn" type="button">INSCRIBIRME AL BLOG</button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<h5>SERVICIOS</h5>
+						<p><a href="#">Quiero ser cuidador</a></p>
+						<p><a href="#">Blog</a></p>
+						<p><a href="#">Buscar cuidador certificado</a></p>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<h5>CONTÁCTANOS</h5>
+						<p>Tlf: +52 (55) 4742-3162</p>
+						<p>WhatsApp: +52 (55) 6892-2182</p>
+						<p>Email: contactomex@kmimos.la</p>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm3.66,7.56H14.41c-.61,0-.74.25-.74.89V10h2.49l-.25,2.7H13.67v8H10.48v-8H8.82V10h1.66V7.83c0-2,1.07-3.07,3.47-3.07h2.21Z"/></svg></a>
+						</div>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm5.59,9.64A8.21,8.21,0,0,1,5.47,16.92,5.9,5.9,0,0,0,9.8,15.69a2.92,2.92,0,0,1-2.7-2,3,3,0,0,0,1.29-.06,2.89,2.89,0,0,1-2.3-2.86,2.63,2.63,0,0,0,1.29.37,2.86,2.86,0,0,1-.89-3.84,8.12,8.12,0,0,0,5.93,3,2.86,2.86,0,0,1,4.88-2.61A5.35,5.35,0,0,0,19.13,7a3,3,0,0,1-1.26,1.6,6,6,0,0,0,1.66-.46A6.12,6.12,0,0,1,18.09,9.64Z"/></svg></a>
+						</div>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle class="cls-1" cx="12.5" cy="12.53" r="2.4"/><path class="cls-1" d="M18.15,8.26a2.62,2.62,0,0,0-.55-.83,1.88,1.88,0,0,0-.83-.55,4.37,4.37,0,0,0-1.35-.25c-.77,0-1,0-2.92,0s-2.15,0-2.92,0a4.17,4.17,0,0,0-1.35.25,2.62,2.62,0,0,0-.83.55,1.88,1.88,0,0,0-.55.83A4.37,4.37,0,0,0,6.6,9.61c0,.77,0,1,0,2.92s0,2.15,0,2.92a4.17,4.17,0,0,0,.25,1.35,2.62,2.62,0,0,0,.55.83,1.88,1.88,0,0,0,.83.55,4.38,4.38,0,0,0,1.35.25c.77,0,1,0,2.92,0s2.15,0,2.92,0a4.18,4.18,0,0,0,1.35-.25,2.62,2.62,0,0,0,.83-.55,1.89,1.89,0,0,0,.55-.83,4.38,4.38,0,0,0,.25-1.35c0-.77,0-1,0-2.92s0-2.15,0-2.92A4.18,4.18,0,0,0,18.15,8.26Zm-5.66,8a3.72,3.72,0,1,1,3.72-3.72A3.71,3.71,0,0,1,12.5,16.25Zm3.87-6.73a.86.86,0,1,1,.86-.86A.86.86,0,0,1,16.37,9.52Z"/><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm7.19,15.48a5,5,0,0,1-.34,1.75,3.44,3.44,0,0,1-.83,1.29,3.7,3.7,0,0,1-1.29.83,5,5,0,0,1-1.75.34c-.77,0-1,0-3,0s-2.21,0-3,0a5,5,0,0,1-1.75-.34,3.44,3.44,0,0,1-1.29-.83,3.7,3.7,0,0,1-.83-1.29,5,5,0,0,1-.34-1.75c0-.77,0-1,0-3s0-2.21,0-3a5,5,0,0,1,.34-1.75,3.44,3.44,0,0,1,.83-1.29,3.7,3.7,0,0,1,1.29-.83,5,5,0,0,1,1.75-.34c.77,0,1,0,3,0s2.21,0,3,0a5,5,0,0,1,1.75.34,3.44,3.44,0,0,1,1.29.83,3.7,3.7,0,0,1,.83,1.29,5,5,0,0,1,.34,1.75c0,.77,0,1,0,3S19.72,14.71,19.69,15.48Z"/></svg></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- FIN SECCIÓN FOOTER -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.es.min.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

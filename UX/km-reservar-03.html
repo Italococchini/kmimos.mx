@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reservación</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" >
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/datepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="css/kmimos_style.css">
+	</head>
+	<body class="page-reservation">
+		<!-- SECCIÓN MENU -->
+		<nav class="navbar navbar-fixed-top bg-white-secondary">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<img src="images/km-navbar-mobile.svg" width="30">
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="images/km-logos/km-logo.png" height="60"></a>
+				</div>
+				<ul class="hidden-xs nav-login">
+					<li><a href="#popup-iniciar-sesion" style="padding-right: 15px" role="button" data-toggle="modal">INICIAR SESIÓN</a></li>
+					<li><a href="#popup-registrarte" style="padding-left: 15px; border-left: 1px solid white;" role="button" data-toggle="modal">REGISTRARME</a></li>
+				</ul>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="km-resultado.html" class="km-nav-link">BUSCAR CUIDADOR</a></li>
+						<li><a href="km-cuidador.html" class="km-btn-primary hidden-xs">QUIERO SER CUIDADOR</a></li>
+						<li><a href="#popup-iniciar-sesion" class="km-nav-link hidden-sm hidden-md hidden-lg" role="button" data-toggle="modal">INICIAR SESIÓN</a></li>
+						<li><a href="#popup-registrarte" class="km-nav-link hidden-sm hidden-md hidden-lg" role="button" data-toggle="modal">REGISTRARME</a></li>
+						<li><a href="km-cuidador.html" class="km-btn-primary hidden-sm hidden-md hidden-lg">QUIERO SER CUIDADOR</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- FIN SECCIÓN MENU -->
+
+		<div class="km-content km-content-reservation">
+			<div class="km-col-steps">
+				<div class="km-col-content">
+					<ul class="steps-numbers">
+						<li>
+							<span class="number checked">1</span>
+						</li>
+						<li class="line"></li>
+						<li>
+							<span class="number checked">2</span>
+						</li>
+						<li class="line"></li>
+						<li>
+							<span class="number active">3</span>
+						</li>
+					</ul>
+
+					<div class="km-title-step">
+						Datos de facturación de tu tarjeta de débito o crédito
+					</div>
+
+					<div class="km-sub-title-step">
+						Recuerda que tus datos deben ser los mismos que el de tu tarjeta.
+					</div>
+
+					<div class="km-form-address">
+						<div class="content-placeholder">
+							<div class="label-placeholder">
+								<label>Nombre</label>
+								<input type="text" name="" value="" class="input-label-placeholder">
+							</div>
+
+							<div class="label-placeholder">
+								<label>Apellido</label>
+								<input type="text" name="" value="" class="input-label-placeholder">
+							</div>
+						</div>
+
+						<div class="content-placeholder">
+							<div class="label-placeholder">
+								<label>Documento de Identidad</label>
+								<input type="text" name="" value="" class="input-label-placeholder">
+							</div>
+
+							<div class="label-placeholder">
+								<label>Teléfono</label>
+								<input type="text" name="" value="" class="input-label-placeholder">
+							</div>
+						</div>
+
+						<div class="label-placeholder">
+							<label>Correo eléctronico</label>
+							<input type="text" name="" value="" class="input-label-placeholder">
+						</div>
+
+						<div class="content-placeholder">
+							<div class="label-placeholder">
+								<label>Selección de Estado</label>
+								<input type="text" name="" value="" class="input-label-placeholder">
+							</div>
+
+							<div class="label-placeholder">
+								<label>Teléfono</label>
+								<input type="text" name="" value="" class="input-label-placeholder">
+							</div>
+						</div>
+
+						<div class="label-placeholder">
+							<label>Dirección</label>
+							<input type="text" name="" value="" class="input-label-placeholder">
+						</div>
+					</div>
+
+					<ul class="list-dropdown">
+						<li>
+							<a href="#" class="km-tab-link">RESUMEN DE TU RESERVA</a>
+							<div class="km-tab-content">
+								<div class="km-content-step km-content-step-2">
+									<div class="km-option-resume">
+										<span class="label-resume">CUIDADOR SELECCIONADO</span>
+										<span class="value-resume">GABRIELA CASTRO</span>
+									</div>
+
+									<div class="km-option-resume">
+										<span class="label-resume">FECHA</span>
+										<span class="value-resume">
+											24/07/2017
+											&nbsp; > &nbsp;
+											26/07/2017
+										</span>
+									</div>
+
+									<div class="km-option-resume">
+										<span class="label-resume padding-bottom">Mascota Pequeña</span>
+
+										<div class="km-option-resume-service">
+											<span class="label-resume-service">Hospedaje día y noce x 2 días</span>
+											<span class="value-resume-service">$300.00</span>
+										</div>
+
+										<div class="km-option-resume-service">
+											<span class="label-resume-service">Baños y secado</span>
+											<span class="value-resume-service">$120.00</span>
+										</div>
+
+										<span class="label-resume padding-top padding-bottom">mascota mediana</span>
+
+										<div class="km-option-resume-service">
+											<span class="label-resume-service">Hospedaje día y noce x 2 días</span>
+											<span class="value-resume-service">$400.00</span>
+										</div>
+
+										<div class="km-option-resume-service">
+											<span class="label-resume-service">Baños y secado</span>
+											<span class="value-resume-service">$120.00</span>
+										</div>
+
+										<div class="km-option-resume-service">
+											<span class="label-resume-service">Transporte sencillo</span>
+											<span class="value-resume-service">$35.00</span>
+										</div>
+									</div>
+
+									<div class="km-services-total">
+										<span class="km-text-total">TOTAL</span>
+										<span class="km-price-total">$420.00</span>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<a href="#" class="km-tab-link">MEDIO DE PAGO</a>
+								<div class="km-tab-content">
+									<label class="optionCheckout" for="acupuntura">ACUPUNTURA ($60.00)</label><br>
+								</div>
+							
+							<!-- <div class="km-tab-content">
+								<div class="km-content-method-paid-inputs">
+									<select class="km-select-method-paid-inputs" name="">
+										<option value="">Pago con tarjeta de crédito o débito</option>
+									</select>
+
+									<div class="label-placeholder">
+										<label>Nombre del tarjetahabitante*</label>
+										<input type="text" name="" value="" class="input-label-placeholder">
+									</div>
+
+									<div class="label-placeholder">
+										<label>Número de Tarjeta*</label>
+										<input type="text" name="" value="" class="input-label-placeholder">
+									</div>
+
+									<div class="content-placeholder">
+										<div class="label-placeholder">
+											<label>Expira (MM/YY)</label>
+											<input type="text" name="" value="" class="input-label-placeholder">
+										</div>
+
+										<div class="label-placeholder">
+											<label>Código de seguridad (MM/YY)</label>
+											<input type="text" name="" value="" class="input-label-placeholder">
+										</div>
+									</div>
+
+									<div class="km-msje-minimal">
+										*Recuerda que tus datos deben ser los mismos que el de tu tarjeta
+									</div>
+
+									<div class="km-term-conditions">
+										<label>
+											<input type="checkbox" name="term-conditions" value="1">
+											Acepto los términos y condiciones
+										</label>
+									</div>
+								</div>
+							</div> -->
+						</li>
+					</ul>
+
+					<a href="./km-reservar-04.html" class="km-end-btn-form">
+						TERMINAR RESERVA
+					</a>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- SECCIÓN BENEFICIOS -->
+		<div class="km-beneficios km-beneficios-footer" style="margin-top: 60px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4">
+						<div class="km-beneficios-icon">
+							<img src="images/km-pago.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">PAGO EN EFECTIVO O CON TARJETA</h5>
+						</div>
+					</div>
+					<div class="col-xs-4 brd-lr">
+						<div class="km-beneficios-icon">
+							<img src="images/km-certificado.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">CUIDADORES CERTIFICADOS</h5>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="km-beneficios-icon">
+							<img src="images/km-veterinaria.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">COBERTURA VETERINARIA</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN BENEFICIOS -->
+		<!-- SECCIÓN FOOTER -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<h5>ENTÉRATE DE LOS ÚLTIMOS CUIDADOS PARA TU MASCOTA</h5>
+						<p>¡Inscríbete a nuestro blog y conócelas!</p>
+						<div class="km-inscripcion">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Ingresa tu correo">
+								<span class="input-group-btn">
+									<button class="btn" type="button">INSCRIBIRME AL BLOG</button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<h5>SERVICIOS</h5>
+						<p><a href="#">Quiero ser cuidador</a></p>
+						<p><a href="#">Blog</a></p>
+						<p><a href="#">Buscar cuidador certificado</a></p>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<h5>CONTÁCTANOS</h5>
+						<p>Tlf: +52 (55) 4742-3162</p>
+						<p>WhatsApp: +52 (55) 6892-2182</p>
+						<p>Email: contactomex@kmimos.la</p>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm3.66,7.56H14.41c-.61,0-.74.25-.74.89V10h2.49l-.25,2.7H13.67v8H10.48v-8H8.82V10h1.66V7.83c0-2,1.07-3.07,3.47-3.07h2.21Z"/></svg></a>
+						</div>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm5.59,9.64A8.21,8.21,0,0,1,5.47,16.92,5.9,5.9,0,0,0,9.8,15.69a2.92,2.92,0,0,1-2.7-2,3,3,0,0,0,1.29-.06,2.89,2.89,0,0,1-2.3-2.86,2.63,2.63,0,0,0,1.29.37,2.86,2.86,0,0,1-.89-3.84,8.12,8.12,0,0,0,5.93,3,2.86,2.86,0,0,1,4.88-2.61A5.35,5.35,0,0,0,19.13,7a3,3,0,0,1-1.26,1.6,6,6,0,0,0,1.66-.46A6.12,6.12,0,0,1,18.09,9.64Z"/></svg></a>
+						</div>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle class="cls-1" cx="12.5" cy="12.53" r="2.4"/><path class="cls-1" d="M18.15,8.26a2.62,2.62,0,0,0-.55-.83,1.88,1.88,0,0,0-.83-.55,4.37,4.37,0,0,0-1.35-.25c-.77,0-1,0-2.92,0s-2.15,0-2.92,0a4.17,4.17,0,0,0-1.35.25,2.62,2.62,0,0,0-.83.55,1.88,1.88,0,0,0-.55.83A4.37,4.37,0,0,0,6.6,9.61c0,.77,0,1,0,2.92s0,2.15,0,2.92a4.17,4.17,0,0,0,.25,1.35,2.62,2.62,0,0,0,.55.83,1.88,1.88,0,0,0,.83.55,4.38,4.38,0,0,0,1.35.25c.77,0,1,0,2.92,0s2.15,0,2.92,0a4.18,4.18,0,0,0,1.35-.25,2.62,2.62,0,0,0,.83-.55,1.89,1.89,0,0,0,.55-.83,4.38,4.38,0,0,0,.25-1.35c0-.77,0-1,0-2.92s0-2.15,0-2.92A4.18,4.18,0,0,0,18.15,8.26Zm-5.66,8a3.72,3.72,0,1,1,3.72-3.72A3.71,3.71,0,0,1,12.5,16.25Zm3.87-6.73a.86.86,0,1,1,.86-.86A.86.86,0,0,1,16.37,9.52Z"/><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm7.19,15.48a5,5,0,0,1-.34,1.75,3.44,3.44,0,0,1-.83,1.29,3.7,3.7,0,0,1-1.29.83,5,5,0,0,1-1.75.34c-.77,0-1,0-3,0s-2.21,0-3,0a5,5,0,0,1-1.75-.34,3.44,3.44,0,0,1-1.29-.83,3.7,3.7,0,0,1-.83-1.29,5,5,0,0,1-.34-1.75c0-.77,0-1,0-3s0-2.21,0-3a5,5,0,0,1,.34-1.75,3.44,3.44,0,0,1,.83-1.29,3.7,3.7,0,0,1,1.29-.83,5,5,0,0,1,1.75-.34c.77,0,1,0,3,0s2.21,0,3,0a5,5,0,0,1,1.75.34,3.44,3.44,0,0,1,1.29.83,3.7,3.7,0,0,1,.83,1.29,5,5,0,0,1,.34,1.75c0,.77,0,1,0,3S19.72,14.71,19.69,15.48Z"/></svg></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- FIN SECCIÓN FOOTER -->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.es.min.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

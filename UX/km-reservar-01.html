@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reservación</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" >
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/datepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="css/kmimos_style.css">
+	</head>
+	<body class="page-reservation">
+		<!-- SECCIÓN MENU -->
+		<nav class="navbar navbar-fixed-top bg-white-secondary">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<img src="images/km-navbar-mobile.svg" width="30">
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="images/km-logos/km-logo.png" height="60"></a>
+				</div>
+				<ul class="hidden-xs nav-login">
+					<li><a href="#popup-iniciar-sesion" style="padding-right: 15px" role="button" data-toggle="modal">INICIAR SESIÓN</a></li>
+					<li><a href="#popup-registrarte" style="padding-left: 15px; border-left: 1px solid white;" role="button" data-toggle="modal">REGISTRARME</a></li>
+				</ul>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="km-resultado.html" class="km-nav-link">BUSCAR CUIDADOR</a></li>
+						<li><a href="km-cuidador.html" class="km-btn-primary hidden-xs">QUIERO SER CUIDADOR</a></li>
+						<li><a href="#popup-iniciar-sesion" class="km-nav-link hidden-sm hidden-md hidden-lg" role="button" data-toggle="modal">INICIAR SESIÓN</a></li>
+						<li><a href="#popup-registrarte" class="km-nav-link hidden-sm hidden-md hidden-lg" role="button" data-toggle="modal">REGISTRARME</a></li>
+						<li><a href="km-cuidador.html" class="km-btn-primary hidden-sm hidden-md hidden-lg">QUIERO SER CUIDADOR</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- FIN SECCIÓN MENU -->
+
+		<div class="km-content km-content-reservation">
+			<div class="km-col-steps">
+				<div class="km-col-content">
+					<ul class="steps-numbers">
+						<li>
+							<span class="number active">1</span>
+						</li>
+						<li class="line"></li>
+						<li>
+							<span class="number">2</span>
+						</li>
+						<li class="line"></li>
+						<li>
+							<span class="number">3</span>
+						</li>
+					</ul>
+
+					<div class="km-title-step">
+						RESERVACIÓN
+					</div>
+
+					<div class="km-sub-title-step">
+						Reserva las fechas y los servicios con tu cuidora Daniela Castro
+					</div>
+
+					<div class="km-dates-step">
+						<div class="km-ficha-fechas">
+							<input type="text" name="" placeholder="DESDE" value="" class="date_from">
+							<input type="text" name="" placeholder="HASTA" value="" class="date_to">
+						</div>
+					</div>
+
+					<div class="km-content-step">
+						<div class="km-content-new-pet">
+							<div class="km-quantity-height">
+								<div class="km-quantity">
+									<a href="#" class="km-minus disabled">-</a>
+									<span class="km-number">1</span>
+									<a href="#" class="km-plus">+</a>
+								</div>
+
+								<div class="km-height">
+									<select class="km-height-select small">
+										<option value="small">PEQUEÑO 0 a 25cm</option>
+										<option value="medium">MEDIANO 25 a 58cm</option>
+										<option value="large">GRANDE 58cm a 73cm</option>
+										<option value="extra-large">GIGANTE 73cm a 200cm</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="km-services-content">
+								<div class="km-service-title">
+									SERVICIOS
+								</div>
+
+								<div class="km-services">
+									<div class="km-service-col">
+										<label class="optionCheckout" for="hospedaje_dia_noche">HOSPEDAJE DE DÍA Y NOCHE</label><br>
+										<label class="optionCheckout" for="guarderia_dia">GUARDERÍA DÍA</label>
+										<input type="checkbox" id="hospedaje_dia_noche" name="hospedaje_dia_noche" value="1" style="display: none;">
+										<input type="checkbox" id="guarderia_dia" name="guarderia_dia" value="1" style="display: none;">
+									</div>
+									<div class="km-service-col">
+										<label class="optionCheckout" for="paseos">PASEOS</label><br>
+										<label class="optionCheckout" for="entrenamientos">ENTRENAMIENTOS</label>
+										<input type="checkbox" id="paseos" name="hospedaje_dia_noche" value="1" style="display: none;">
+										<input type="checkbox" id="entrenamientos" name="guarderia_dia" value="1" style="display: none;">
+									</div>
+								</div>
+
+								<div class="km-service-title">
+									SERVICIOS ADICIONALES
+								</div>
+
+								<div class="km-services">
+									<div class="km-service-col">
+										<label class="optionCheckout" for="banio_secado">BAÑO Y SECADO ( $120.00)</label><br>
+										<label class="optionCheckout" for="limpieza_dental">LIMPIEA DENTAL ($80.00)</label>
+										<label class="optionCheckout" for="visita_veterinario">VISITA AL VETERINARIO ( $230.00)</label>
+										<input type="checkbox" id="banio_secado" name="banio_secado" value="1" style="display: none;">
+										<input type="checkbox" id="limpieza_dental" name="limpieza_dental" value="1" style="display: none;">
+										<input type="checkbox" id="visita_veterinario" name="visita_veterinario" value="1" style="display: none;">
+									</div>
+									<div class="km-service-col">
+										<label class="optionCheckout" for="acupuntura">ACUPUNTURA ($60.00)</label><br>
+										<label class="optionCheckout" for="transporte_sencillo">TRANSPORTE SENCILLO ($35.00)</label>
+										<label class="optionCheckout" for="transporte_redondo">TRANSPORTE REDONDO ($50.00)</label>
+										<input type="checkbox" id="acupuntura" name="acupuntura" value="1" style="display: none;">
+										<input type="checkbox" id="transporte_sencillo" name="transporte_sencillo" value="1" style="display: none;">
+										<input type="checkbox" id="transporte_redondo" name="transporte_redondo" value="1" style="display: none;">
+									</div>
+								</div>
+							</div>
+
+							<div class="km-services-total">
+								<span class="km-text-total">TOTAL</span>
+								<span class="km-price-total">$420.00</span>
+							</div>
+
+						</div>
+						<a href="#" class="btn-add-new-pet">
+							<span>AGREGAR NUEVA MASCOTA</span>
+						</a>
+					</div>
+
+					<div class="km-text-end-form">
+						* Precio final (incluye cobertura veterinaria y gastos administrativos; no incluye servicios adicionales)
+					</div>
+
+					<a href="./km-reservar-02.html" class="km-end-btn-form">
+						<span>SIGUIENTE</span>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="km-col-empty">
+				<br><br><br><br><br><br><br><br>
+				<img src="images/km-reserva/bg-cachorro.png" style="max-width: 100%;">
+			</div>
+		</div>
+
+		<!-- SECCIÓN BENEFICIOS -->
+		<div class="km-beneficios km-beneficios-footer" style="margin-top: 60px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4">
+						<div class="km-beneficios-icon">
+							<img src="images/km-pago.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">PAGO EN EFECTIVO O CON TARJETA</h5>
+						</div>
+					</div>
+					<div class="col-xs-4 brd-lr">
+						<div class="km-beneficios-icon">
+							<img src="images/km-certificado.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">CUIDADORES CERTIFICADOS</h5>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="km-beneficios-icon">
+							<img src="images/km-veterinaria.svg">
+						</div>
+						<div class="km-beneficios-text">
+							<h5 class="h5-sub">COBERTURA VETERINARIA</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN SECCIÓN BENEFICIOS -->
+		<!-- SECCIÓN FOOTER -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<h5>ENTÉRATE DE LOS ÚLTIMOS CUIDADOS PARA TU MASCOTA</h5>
+						<p>¡Inscríbete a nuestro blog y conócelas!</p>
+						<div class="km-inscripcion">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Ingresa tu correo">
+								<span class="input-group-btn">
+									<button class="btn" type="button">INSCRIBIRME AL BLOG</button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<h5>SERVICIOS</h5>
+						<p><a href="#">Quiero ser cuidador</a></p>
+						<p><a href="#">Blog</a></p>
+						<p><a href="#">Buscar cuidador certificado</a></p>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<h5>CONTÁCTANOS</h5>
+						<p>Tlf: +52 (55) 4742-3162</p>
+						<p>WhatsApp: +52 (55) 6892-2182</p>
+						<p>Email: contactomex@kmimos.la</p>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm3.66,7.56H14.41c-.61,0-.74.25-.74.89V10h2.49l-.25,2.7H13.67v8H10.48v-8H8.82V10h1.66V7.83c0-2,1.07-3.07,3.47-3.07h2.21Z"/></svg></a>
+						</div>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm5.59,9.64A8.21,8.21,0,0,1,5.47,16.92,5.9,5.9,0,0,0,9.8,15.69a2.92,2.92,0,0,1-2.7-2,3,3,0,0,0,1.29-.06,2.89,2.89,0,0,1-2.3-2.86,2.63,2.63,0,0,0,1.29.37,2.86,2.86,0,0,1-.89-3.84,8.12,8.12,0,0,0,5.93,3,2.86,2.86,0,0,1,4.88-2.61A5.35,5.35,0,0,0,19.13,7a3,3,0,0,1-1.26,1.6,6,6,0,0,0,1.66-.46A6.12,6.12,0,0,1,18.09,9.64Z"/></svg></a>
+						</div>
+						<div class="km-icon-redes">
+							<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle class="cls-1" cx="12.5" cy="12.53" r="2.4"/><path class="cls-1" d="M18.15,8.26a2.62,2.62,0,0,0-.55-.83,1.88,1.88,0,0,0-.83-.55,4.37,4.37,0,0,0-1.35-.25c-.77,0-1,0-2.92,0s-2.15,0-2.92,0a4.17,4.17,0,0,0-1.35.25,2.62,2.62,0,0,0-.83.55,1.88,1.88,0,0,0-.55.83A4.37,4.37,0,0,0,6.6,9.61c0,.77,0,1,0,2.92s0,2.15,0,2.92a4.17,4.17,0,0,0,.25,1.35,2.62,2.62,0,0,0,.55.83,1.88,1.88,0,0,0,.83.55,4.38,4.38,0,0,0,1.35.25c.77,0,1,0,2.92,0s2.15,0,2.92,0a4.18,4.18,0,0,0,1.35-.25,2.62,2.62,0,0,0,.83-.55,1.89,1.89,0,0,0,.55-.83,4.38,4.38,0,0,0,.25-1.35c0-.77,0-1,0-2.92s0-2.15,0-2.92A4.18,4.18,0,0,0,18.15,8.26Zm-5.66,8a3.72,3.72,0,1,1,3.72-3.72A3.71,3.71,0,0,1,12.5,16.25Zm3.87-6.73a.86.86,0,1,1,.86-.86A.86.86,0,0,1,16.37,9.52Z"/><path class="cls-1" d="M12.5,0A12.5,12.5,0,1,0,25,12.5,12.5,12.5,0,0,0,12.5,0Zm7.19,15.48a5,5,0,0,1-.34,1.75,3.44,3.44,0,0,1-.83,1.29,3.7,3.7,0,0,1-1.29.83,5,5,0,0,1-1.75.34c-.77,0-1,0-3,0s-2.21,0-3,0a5,5,0,0,1-1.75-.34,3.44,3.44,0,0,1-1.29-.83,3.7,3.7,0,0,1-.83-1.29,5,5,0,0,1-.34-1.75c0-.77,0-1,0-3s0-2.21,0-3a5,5,0,0,1,.34-1.75,3.44,3.44,0,0,1,.83-1.29,3.7,3.7,0,0,1,1.29-.83,5,5,0,0,1,1.75-.34c.77,0,1,0,3,0s2.21,0,3,0a5,5,0,0,1,1.75.34,3.44,3.44,0,0,1,1.29.83,3.7,3.7,0,0,1,.83,1.29,5,5,0,0,1,.34,1.75c0,.77,0,1,0,3S19.72,14.71,19.69,15.48Z"/></svg></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- FIN SECCIÓN FOOTER -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.min.js"></script>
+		<script type="text/javascript" src="js/datepicker.es.min.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
