@@ -17,7 +17,7 @@
 
 		function multi_query($sql){
 			return $this->conn->multi_query($sql);
-		}
+		} 
 
 		function get_var($sql, $campo = ""){
 			$result = $this->query($sql);

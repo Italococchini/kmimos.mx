@@ -1,3 +1,4 @@
+
 jQuery( document ).ready(function() {
 	jQuery("#close_login").on("click", function(e){
         close_login_modal();

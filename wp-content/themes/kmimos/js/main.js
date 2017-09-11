@@ -326,7 +326,7 @@ $(document).ready(function(){
 		var span = $(".km-number", div);
 		var minus = $(".km-minus", div);
 		var input = $("input", div);
-		
+
 		var valor = parseInt(span.html()) + 1;
 
 		span.html( valor );

@@ -108,10 +108,12 @@ $HTML = '
         </script>
 
         <link type='text/css' href='".getTema()."/css/fontello.min.css' rel='stylesheet' />
+
+        <!-- Start App Google -->
+        <script>startApp();</script>
     ";
 
     echo comprimir_styles($HTML);
-
     echo "</body></html>";
 ?>
         

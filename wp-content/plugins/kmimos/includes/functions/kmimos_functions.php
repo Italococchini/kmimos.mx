@@ -58,11 +58,7 @@
 		}
 		$datos_json = json_encode($datos, JSON_UNESCAPED_UNICODE );
 		return "<script>
-				var objectEstados = jQuery.makeArray(
-					eval(
-						'(".$datos_json.")'
-						)
-					);
-				var estados_municipios = objectEstados[0] ;
+				var objectEstados = JSON.parse('".$datos_json."');
+				var estados_municipios = objectEstados;
 			</script>";
 	}

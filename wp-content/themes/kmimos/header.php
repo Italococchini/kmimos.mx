@@ -25,18 +25,70 @@
 
 	wp_head(); 
 
+	include_once( 'partes/head/script_google_auth.php' );
+	include_once( 'partes/head/script_facebook_auth.php' );
+
 	global $post;
 	$reserrvacion_page = "";
 	if( $post->post_name == 'reservar' ){
 		$reserrvacion_page = "page-reservation";
 	}
 
+    //COORDENADAS
+    global $wpdb;
+    $result_coord = $wpdb->get_results("
+        SELECT
+            locations.clave AS clave,
+            locations.valor AS valor
+        FROM
+            kmimos_opciones AS locations
+        WHERE
+            locations.clave LIKE 'municipio%'
+            OR
+            locations.clave LIKE 'estado%'
+        ORDER BY
+            locations.id ASC"
+    );
+
+    $state=array();
+    $locale=array();
+    foreach($result_coord as $data){
+        $clave = $data->clave;
+        $valor = unserialize($data->valor);
+        //var_dump(strpos($clave,'estado'));
+
+        if(strpos($clave,'estado_') !== false){
+            $id=str_replace('estado_','',$clave);
+            $state[$id]=array(
+                'lat'=>$valor['referencia']->lat,
+                'lng'=>$valor['referencia']->lng
+            );
+        }
+
+        if(strpos($clave,'municipio_') !== false){
+            $id=str_replace('municipio_','',$clave);
+            $locale[$id]=array(
+                'lat'=>$valor['referencia']->lat,
+                'lng'=>$valor['referencia']->lng
+            );
+        }
+    }
+
+    $coord=array();
+    $coord['state']=$state;
+    $coord['locale']=$locale;
+
+    $HTML .= "<script type='text/javascript'>var Coordsearch = JSON.parse('".json_encode($coord)."');</script>";
+
+	$estados = get_estados_municipios();
+	
 	$HTML .= '
 		<script type="text/javascript"> 
 			var HOME = "'.getTema().'/"; 
 			var RAIZ = "'.get_home_url().'/"; 
 			var pines = []; 
 		</script>
+		'.$estados.'
 	</head>
 
 	<body class="'.join( ' ', get_body_class( $class ) ).' '.$reserrvacion_page.'" >';
@@ -77,12 +129,12 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="'.get_home_url().'/busqueda/" class="km-nav-link">BUSCAR CUIDADOR</a></li>
-							<li><a href="km-cuidador.html" class="km-btn-primary hidden-xs">QUIERO SER CUIDADOR</a></li>
+							<li><a href="'.get_home_url().'/quiero-ser-cuidador-certificado-de-perros" class="km-btn-primary hidden-xs">QUIERO SER CUIDADOR</a></li>
 
 							'.$menus_movil.'
 
 							<li><a href="'.get_home_url().'/busqueda/" class="km-nav-link hidden-sm hidden-md hidden-lg">BUSCAR CUIDADOR</a></li>
-							<li><a href="km-cuidador.html" class="km-btn-primary hidden-sm hidden-md hidden-lg">QUIERO SER CUIDADOR</a></li>
+							<li><a href="'.get_home_url().'/quiero-ser-cuidador-certificado-de-perros" class="km-btn-primary hidden-sm hidden-md hidden-lg">QUIERO SER CUIDADOR</a></li>
 						</ul>
 					</div>
 				</div>

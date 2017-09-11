@@ -1933,6 +1933,20 @@ a.km-btn-comentario {
     position: relative;
     color: white;
 }
+.km-datos-municipio-opcion,
+.km-datos-estado-opcion{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .2px;
+    font-family: Gotham-Pro-Regular, Arial, serif;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0px;
+}
 
 
 
@@ -1966,7 +1980,15 @@ a.km-btn-comentario {
 /* FIN SECCIÓN CÓMO SER CUIDADOR */
 /* POPUPS REGISTRO */
 #popup-registro-cuidador1 .modal-content {
-	padding: 40px 20px;
+	border-radius: 5px;
+	/*padding: 40px 20px;*/
+}
+.has-error input{
+	border-bottom-color: red!important;
+}
+.has-error input
+.has-error label{
+	color: red!important;
 }
 /* FIN POPUPS REGISTRO */
 /* FIN PÁGINA QUIERO SER CUIDADOR */
@@ -5009,7 +5031,7 @@ a.km-btn-comentario {
     display:inline-block
 }
 .popup-registro-exitoso, .popup-registro-exitoso-final {
-    background:url(../images/new/registro-exitoso.jpg) no-repeat;
+    background:url(../images/new/km-registro/registro-exitoso.jpg) no-repeat;
     height:650px;
     background-size:cover;
     background-position:center center;
@@ -5027,13 +5049,14 @@ a.km-btn-comentario {
     position:relative
 }
 .popup-registro-cuidador-paso1 a img {
-    width:150px;
+    width:180px;
+    height:180px;
     margin-bottom:30PX
 }
 .popup-registro-cuidador-paso1 textarea {
     width:100%;
     height:200px;
-    margin:20px 0;
+    margin:20px 0 0 0;
     resize:none
 }
 .km-registro-tip {
