@@ -193,10 +193,8 @@
 			<script type="text/javascript" src="'.getTema().'/js/markerclusterer.js"></script>
 			<script type="text/javascript" src="'.getTema().'/js/oms.min.js"></script>
     ';
-
+    include ('partes/cuidador/conocelo.php');
 	echo comprimir_styles($HTML);
-
-
 
     get_footer(); 
 ?>

@@ -2,9 +2,7 @@
 $HTML .= '
 <script>
   function statusChangeCallback(response) {
-    console.log(response);
     if (response.status == \'connected\') {
-      console.log("connected");
       KmimosAPI();
     }else{
       login();
@@ -26,7 +24,9 @@ $HTML .= '
   	});
 
   	FB.getLoginStatus(function(response) {
-  	  statusChangeCallback(response);
+  	  if (response.status == \'connected\') {
+        console.log("connected");
+      }
   	});
   };
 
@@ -51,15 +51,25 @@ $HTML .= '
   }
 
   function KmimosAPI() {
-    FB.api(\'/me\', {fields: \'first_name, last_name, email, name, id\'}, function(response) {
-      $( ".social_facebook_id" ).val( response.id );
-      $( ".social_firstname" ).val( response.first_name );
-      $( ".social_lastname" ).val( response.last_name );
-      $( ".social_email" ).val( response.email );
-      $( ".social_firstname" ).val( response.name );
-      $(".social-next-step").click();
+    var status = false;
+    FB.getLoginStatus(function(response) {
+      if (response.status == \'connected\') {
+        status = true;
+      }
     });
+    if( status ){
+      FB.api(\'/me\', {fields: \'first_name, last_name, email, name, id\'}, function(response) {
 
+        console.log( response );
+
+        $( ".social_facebook_id" ).val( response.id );
+        $( ".social_firstname" ).val( response.first_name );
+        $( ".social_lastname" ).val( response.last_name );
+        $( ".social_email" ).val( response.email );
+        $( ".social_firstname" ).val( response.name );
+        $( ".social-next-step" ).click();
+      });
+    }
     FB.logout();
   }
 
