@@ -83,12 +83,21 @@
         clearTimeout(SubscribeTime);
 
         <?php
+
             $PopUpSection='home';
             $bodyClass=get_body_class();
             if(in_array('page-template-blog',$bodyClass)){
                 $PopUpSection='PopUpBlog';
             }else if(in_array('single-post',$bodyClass)){
                 $PopUpSection='PopUpBlogPost';
+            }
+            if( array_key_exists('wlabel',$_SESSION) || array_key_exists('wlabel', $_GET) ){
+                if(array_key_exists('wlabel',$_SESSION)){
+                    $PopUpSection=$_SESSION['wlabel'];
+
+                }else if(array_key_exists('wlabel',$_GET)){
+                    $PopUpSection=$_GET['wlabel'];
+                }
             }
         ?>
 
