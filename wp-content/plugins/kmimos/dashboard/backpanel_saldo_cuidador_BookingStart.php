@@ -1,6 +1,6 @@
 <?php global $wpdb;
 // PagoCuidador 
-require_once('core/ControllerSaldoCuidador.php');
+require_once('core/ControllerSaldoCuidadorBookingStart.php');
 
 $date = getRangoFechas();
 
@@ -77,9 +77,9 @@ $PagoCuidador = getPagoCuidador( $desde, $hasta );
 			  </thead>
 			  <tbody>
 			  	<?php $count=0; ?>
-			  	<?php foreach( $PagoCuidador as $ID => $row ){ 
-            if( $row['total'] != 0){
-          ?>
+			  	<?php foreach( $PagoCuidador as $ID => $row ){ ?>
+			  		<?php echo $row['booking_start']; ?>
+			  		<?php if( $row['total'] != 0 ){ ?>
 				    <tr>
 
 				    	<th class="text-center"><?php echo ++$count; ?></th>
@@ -91,7 +91,8 @@ $PagoCuidador = getPagoCuidador( $desde, $hasta );
 				    	<th class="text-left"><?php echo str_replace('|', '', $row['detalle']); ?></th>
 
 				    </tr>
-			   	<?php }} ?>
+				   	<?php } ?>
+			   	<?php } ?>
 			  </tbody>
 			</table>
 		</div>

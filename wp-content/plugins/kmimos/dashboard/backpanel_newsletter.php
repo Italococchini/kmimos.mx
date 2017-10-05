@@ -11,7 +11,8 @@ if(	!empty($_POST['desde']) && !empty($_POST['hasta']) ){
 	$hasta = (!empty($_POST['hasta']))? $_POST['hasta']: "";
 }
 // Buscar Reservas
-$subscribe = getNewsletter();
+$subscribe = getNewsletter( $desde, $hasta );
+
 ?>
 
 
@@ -27,7 +28,7 @@ $subscribe = getNewsletter();
 		<!-- Filtros -->
 		<div class="row text-right"> 
 			<div class="col-sm-12">
-		    	<form class="form-inline" action="/wp-admin/admin.php?page=bp_suscriptores" method="POST">
+		    	<form class="form-inline" action="/wp-admin/admin.php?page=<?php echo $_GET['page']; ?>" method="POST">
 					<label>Filtrar:</label>
 					<div class="form-group">
 						<div class="input-group">
@@ -65,7 +66,7 @@ $subscribe = getNewsletter();
 			      <th>Nombre</th>
 			      <th>Email</th>
 			      <th>Fecha de registro</th>
-					<th>Origen</th>
+			      <th>Fuente</th>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -75,7 +76,7 @@ $subscribe = getNewsletter();
 				    	<th class="text-center"><?php echo ++$count; ?></th>
 						<th><?php echo $row['name'];  ?></th>
 						<th><?php echo $row['email']; ?></th>
-						<th><?php echo date('Y-m-d g:i:s A',strtotime($row['time'])-(60*60*5)); ?></th>
+						<th><?php echo $row['time']; ?></th>
 						<th><?php echo $row['source']; ?></th>
 				    </tr>
 			   	<?php } ?>

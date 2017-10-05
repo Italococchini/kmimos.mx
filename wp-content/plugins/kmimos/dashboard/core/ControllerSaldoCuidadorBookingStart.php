@@ -42,13 +42,15 @@ function getPagoCuidador($desde, $hasta){
 		}
 
 		//[ {$row->reserva_id}: $". number_format($monto, 2, ",", ".")." ]{$separador}
+		
 		if( $monto > 0 ){
-		$pagos[ $row->cuidador_id ]['detalle'] .= $r.'
-			<small class="btn btn-xs btn-default" style="color: #555;background-color: #eee;border: 1px solid #ccc;">
-			  '.$row->reserva_id.' <span class="badge" style="background:#fff;color:#000;">$'.number_format($monto, 2, ",", ".").'</span>
-			</small>
-		'.$separador;
-    }
+			$pagos[ $row->cuidador_id ]['detalle'] .= $r.'
+				<small class="btn btn-xs btn-default" style="color: #555;background-color: #eee;border: 1px solid #ccc;">
+				  '.$row->reserva_id.' <span class="badge" style="background:#fff;color:#000;">$'.number_format($monto, 2, ",", ".").'</span>
+				</small>
+			'.$separador;
+	    }
+
 		if( array_key_exists('total', $pagos[ $row->cuidador_id ]) ){
 			$monto = $pagos[ $row->cuidador_id ]['total'] + $monto;
 		}
@@ -102,8 +104,10 @@ function getReservas($desde="", $hasta=""){
 	$filtro_adicional = "";
 
 	if( !empty($desde) && !empty($hasta) ){
+		$hasta = str_replace('-', '', $hasta);
+		$desde = str_replace('-', '', $desde);
 		$filtro_adicional = " 
-			AND ( r.post_date >= '{$desde} 00:00:00' and  r.post_date <= '{$hasta} 23:59:59' )
+			AND ( rm_start.meta_value >= '{$desde}000000' and  rm_start.meta_value <= '{$hasta}235959' )
 		";
 	}
 	// else{
@@ -119,11 +123,13 @@ function getReservas($desde="", $hasta=""){
 			r.ID as reserva_id,
 			rm_cost.meta_value as total,
 			pm_remain.meta_value as remanente,
-			pm_total.meta_value as total_pago
+			pm_total.meta_value as total_pago,
+			rm_start.meta_value as booking_start
 
 		FROM wp_posts as r
 			LEFT JOIN wp_postmeta as rm ON rm.post_id = r.ID and rm.meta_key = '_booking_order_item_id' 
 			LEFT JOIN wp_postmeta as rm_cost ON rm_cost.post_id = r.ID and rm_cost.meta_key = '_booking_cost'
+			LEFT JOIN wp_postmeta as rm_start ON rm_start.post_id = r.ID and rm_start.meta_key = '_booking_start'
 
 			LEFT JOIN wp_posts as p ON p.ID = r.post_parent
 			LEFT JOIN wp_postmeta as pm_remain ON pm_remain.post_id = p.ID and pm_remain.meta_key = '_wc_deposits_remaining'
@@ -141,6 +147,8 @@ function getReservas($desde="", $hasta=""){
 			{$filtro_adicional}
 		;";
  
+
+
 	$reservas = $wpdb->get_results($sql);
 	return $reservas;
 }

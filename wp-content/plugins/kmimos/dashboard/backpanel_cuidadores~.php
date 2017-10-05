@@ -1,6 +1,6 @@
 <?php global $wpdb;
 // Usuarios 
-require_once('core/ControllerClientes.php');
+require_once('core/ControllerCuidadores.php');
 // Parametros: Filtro por fecha
 $landing = '';
 $date = getdate();
@@ -18,14 +18,14 @@ $users = getUsers($desde, $hasta);
 <div class="x_panel">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_title">
-			<h2>Panel de Control <small>Lista de clientes</small></h2>
+			<h2>Panel de Control <small>Lista de cuidadores</small></h2>
 			<hr>
 			<div class="clearfix"></div>
 		</div>
 		<!-- Filtros -->
 		<div class="row text-right"> 
 			<div class="col-sm-12">
-		    	<form class="form-inline" action="/wp-admin/admin.php?page=bp_clientes" method="POST">
+		    	<form class="form-inline" action="/wp-admin/admin.php?page=bp_cuidadores" method="POST">
 					<label>Filtrar:</label>
 					<div class="form-group">
 						<div class="input-group">
@@ -59,10 +59,14 @@ $users = getUsers($desde, $hasta);
 					cellspacing="0" width="100%">
 			  <thead>
 			    <tr>
-			      <th>#</th>
+			      <th>ID</th>
 			      <th>Fecha Registro</th>
 			      <th>Nombre y Apellido</th>
+			      <th>Nombre</th>
+			      <th>Apellido</th>
 			      <th>Email</th>
+			      <th>Estado</th>
+			      <th>Municipio</th>
 			      <th>Teléfono</th>
 			      <th>Donde nos conocio?</th>
 			      <th>Estatus</th>
@@ -77,27 +81,34 @@ $users = getUsers($desde, $hasta);
 			  			$link_login = "/?i=".md5($row['ID']);
 
 			  			$name = "{$usermeta['first_name']} {$usermeta['last_name']}";
-			  			if(empty( trim($name)) ){
-			  			 	$name = $usermeta['nickname'];
+			  			if(empty($name)){
+			  				$name = $usermeta['nickname'];
 			  			}
+
+			  			$ubicacion = getEstadoMunicipio($row['estado'], $row['municipios']);
 			  		?>
 				    <tr>
 				    	<th class="text-center"><?php echo $row['ID']; ?></th>
 						<th><?php echo date_convert($row['user_registered'], 'd-m-Y') ; ?></th>
 						<th><?php echo $name; ?></th>
+						<th><?php echo $usermeta["first_name"]; ?></th>
+						<th><?php echo $usermeta["last_name"]; ?></th>
 						<th>
 					  		<a href="<?php echo $link_login; ?>">
 								<?php echo $row['user_email']; ?>
 							</a>
 						</th>
+						<th><?php echo $ubicacion['estado']; ?></th>
+						<th><?php echo $ubicacion['municipio']; ?></th>						
 						<th><?php echo $usermeta['phone']; ?></th>
 						<th><?php echo (!empty($usermeta['user_referred']))? $usermeta['user_referred'] : 'Otros' ; ?></th>
-						<th><?php echo ($row['status']==0)? 'Activo' : 'Inactivo' ; ?></th>
+						<th><?php echo ($row['estatus']==1)? 'Activo' : 'Inactivo' ; ?></th>
 				    </tr>
 			   	<?php } ?>
 			  </tbody>
 			</table>
 			</div>
+			
 		</div>
 	<?php } ?>	
   </div>

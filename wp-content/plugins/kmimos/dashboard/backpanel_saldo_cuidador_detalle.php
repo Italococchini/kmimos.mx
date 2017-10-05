@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 // Reservas 
 require_once('core/ControllerSaldoCuidadorDetalle.php');
+require_once('core/GlobalFunction.php');
 // Parametros: Filtro por fecha
 $date = getdate(); 
 $desde = date("Y-m-01", $date[0] );
@@ -22,7 +23,7 @@ $reservas = getReservas($desde, $hasta);
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_title">
-		<h2>Panel de Control <small>Reservas</small></h2>
+		<h2>Panel de Control <small>Detalle de Pago al Cuidador</small></h2>
 		<hr>
 		<div class="clearfix"></div>
 		</div>
@@ -75,6 +76,10 @@ $reservas = getReservas($desde, $hasta);
 			      <th># Reserva</th>
 			      <th>Estatus</th>
 			      <th>Fecha Reservacion</th>
+			      <th>Fecha Inicio Reserva</th>
+			      <th>Fecha Fin Reserva</th>
+
+
 			      <th>Cliente</th>
 
 			      <th>Cuidador ID</th>
@@ -149,6 +154,9 @@ $reservas = getReservas($desde, $hasta);
 					<th><?php echo $reserva->nro_reserva; ?></th>
 					<th class="text-center"><?php echo $estatus['sts_corto']; ?></th>
 					<th class="text-center"><?php echo $reserva->fecha_solicitud; ?></th>
+
+					<th class="text-center"><?php echo date_convert($meta_reserva['_booking_start'],'d-m-Y'); ?></th>
+					<th class="text-center"><?php echo date_convert($meta_reserva['_booking_end'], 'd-m-Y'); ?></th>
 
 					<th><?php echo "<a href='".get_home_url()."/?i=".md5($reserva->cliente_id)."'>".$cliente['first_name'].' '.$cliente['last_name']; ?></a></th>
 
