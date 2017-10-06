@@ -1,3 +1,22 @@
+<footer class="footer">
+	<div class="master">
+		<div class="texto">
+			Descarga nuestros términos y condiciones <a href="#">aquí</a>.<br>
+			<img src="img/phone.png" class="phone">01 800 056 4667<br>
+			<img src="img/logo-footer.png" class="logo-footer">
+		</div>
+		<div class="redes">
+			<a href="https://www.instagram.com/kmimosmx/?hl=es" target="_blank"><img src="img/r1.png"></a>
+			<a href="https://twitter.com/KmimosMx" target="_blank"><img src="img/r2.png"></a>
+			<a href="https://www.facebook.com/KmimosMx" target="_blank"><img src="img/r3.png"></a>
+			<a href="https://www.youtube.com/channel/UCIOJJlTD1184V_uk2nGUxZw" target="_blank"><img src="img/r4.png"></a>
+		</div>
+	</div>
+</footer>
+<script src="./js/jquery.js"></script>
+<script src="./js/scripts.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
 
 <!-- BEGIN Modal -->
 
@@ -24,8 +43,7 @@
       	</div>
   			
       		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
-      			<img src="img/texto.gif" class="img-responsive img-texto-modal" style="position: absolute;
-    left: 65px;">
+      			<img src="img/texto.gif" class="img-responsive img-texto-modal" style="position: absolute;z-index:2;left: 65px;">
       		</div>
       		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" style="padding-right:0px; text-align:right;">
       			<img src="img/perro_pata_rosa.png" class="img-responsive pull-right" style="border-radius: 6px;">
@@ -33,56 +51,9 @@
       		<div class="clearfix"></div>
       </div>
     </div>
-
-
-    <div class="hidden modal-content" style="background: #de163b url(img/);">
-
-      <div class="modal-header" style="    border-bottom: 0px solid transparent;">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  
-        style="background: transparent;
-		    border: 0px;
-		    right: 12px;
-		    position: absolute;">
-        	<img data-dismiss="modal" src="img/cerrar.png" width="40px" height="40px">
-        </button>
-      </div>
-      <div class="modal-body">
-      		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-      			
-      		</div>
-      		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-      			<img src="img/perro_pata_rosa.png" class="img-responsive">
-      		</div>
-      		<div class="clearfix"></div>
-      </div>
-    </div>
-
-
   </div>
 </div>
-
 <!-- END Modal -->
-
-
-<footer class="footer">
-	<div class="master">
-		<div class="texto">
-			Descarga nuestros términos y condiciones <a href="#">aquí</a>.<br>
-			<img src="img/phone.png" class="phone">01 800 056 4667<br>
-			<img src="img/logo-footer.png" class="logo-footer">
-		</div>
-		<div class="redes">
-			<a href="https://www.instagram.com/kmimosmx/?hl=es" target="_blank"><img src="img/r1.png"></a>
-			<a href="https://twitter.com/KmimosMx" target="_blank"><img src="img/r2.png"></a>
-			<a href="https://www.facebook.com/KmimosMx" target="_blank"><img src="img/r3.png"></a>
-			<a href="https://www.youtube.com/channel/UCIOJJlTD1184V_uk2nGUxZw" target="_blank"><img src="img/r4.png"></a>
-		</div>
-	</div>
-</footer>
-<script src="./js/jquery.js"></script>
-<script src="./js/scripts.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-
 <script type="text/javascript">
 	setTimeout(mostrar_modal,3600);
 	function mostrar_modal(){

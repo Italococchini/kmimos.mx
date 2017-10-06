@@ -1208,17 +1208,15 @@ table {
 	position: relative;
 }
 
-@media (max-width: 768px){
+@media all and (max-width: 768px){
 
 	.col-xs-12{
-	    z-index:0!important;
+	    z-index:1!important;
 	}
-	.col-xs-12 img{
-	    position: relative!important;
-	    left: 0px!important;
-	}
+	
 	.img-texto-modal{
-	    z-index:3px!important;
+	    z-index:3!important;
+	    max-width: 95%!important;
 	}
 
 	.nomovil{
@@ -1545,8 +1543,29 @@ table {
     width: calc(98% - 9px);
     text-align: center;
 	}
-
-
 }
 
+@media all and (max-width: 530px){
+	.col-xs-12 img{
+	    position: relative!important;
+	    left: 0px!important;
+	}
+	.img-texto-modal{
+		width: 95%!important;
+		z-index:3!important;
+	}
+}
+@media (min-width: 531px) and (max-width: 767px){
+	.img-texto-modal{
+		width: 45%!important;
+		left: 48px!important;
+		z-index:3!important;
+	}
+}
+@media (max-width: 767px) and (orientation: landscape){
+	.img-texto-modal{
+		width: 45%!important;
+		z-index:3!important;
+	}
+}
 

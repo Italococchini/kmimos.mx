@@ -1,4 +1,7 @@
+<?php include_once(dirname(__DIR__).'/wp-load.php'); ?>
+
 <html xmlns="http://www.w3.org/1999/xhtml" class="wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-montserrat-n4-active wf-montserrat-i4-active wf-montserrat-n7-active wf-montserrat-i7-active wf-active"><head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="lp-version" content="v6.7.19">
@@ -260,7 +263,7 @@
             top:160px;
             z-index:29;
             width:574px;
-            height:161px;
+            /*height:161px;*/
             position:absolute;
         }
         #lp-pom-image-175 {
@@ -2290,7 +2293,8 @@
             font-size: 34px;
             line-height: 30px;
             font-family: "lato";
-            font-weight: lighter;
+            /*font-weight: lighter;*/
+            font-weight: bold;
 
         }
         #tituloParte2 {
@@ -2345,8 +2349,10 @@
                 line-height: 19px;
                 padding: 5px 3px 5px 8px;
                 font-family: "lato";
+                font-weight: bold;
+/*                font-family: "lato";
                 font-weight: lighter;
-
+*/
             }
             #tituloParte2 {
                 text-align: center;
@@ -2464,7 +2470,81 @@
 
     <!-- lp:insertions end head -->
 
-    <style type="text/css">@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {* {-webkit-text-size-adjust: 98%;}}</style></head>
+    <style type="text/css">@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {* {-webkit-text-size-adjust: 98%;}}</style>
+
+
+    <style type="text/css">
+            #PageSubscribe{position:relative; max-width: 700px;  margin: 0 auto;  padding: 25px;  top: 75px; border-radius: 20px;  background: #ba2287;  overflow: hidden;}
+            #PageSubscribe .exit{float: right; cursor: pointer;}
+            #PageSubscribe .section{ width: 50%; padding: 10px; float: left; font-size: 17px; text-align: left;}
+            #PageSubscribe .section.section1{font-size: 20px;}
+            #PageSubscribe .section.section1 span{font-size: 25px;}
+            #PageSubscribe .section.section1 .images{padding:10px 0; text-align: center;}
+            #PageSubscribe .section.section3{width: 100%; font-size: 17px; font-weight: bold; text-align: center;}
+            #PageSubscribe .section.section2{}
+            #PageSubscribe .section.section2 .message{font-size: 15px; border: none; background: none; opacity:0; visible: hidden; transition: all .3s;}
+            #PageSubscribe .section.section2 .message.show{opacity:1; visible:visible;}
+            #PageSubscribe .section.section2 .icon{width: 30px; padding: 5px 0;}
+            #PageSubscribe .section.section2 .subscribe {margin: 20px 0;  }
+            #PageSubscribe .section.section2 form{margin: 0; display:flex;}
+            #PageSubscribe .section.section2 input,
+            #PageSubscribe .section.section2 button{width: 100%; max-width: calc(100% - 60px); margin: 5px; padding: 5px 10px; color: #CCC; font-size: 15px; border-radius: 20px;  border: none; background: #FFF; }
+            #PageSubscribe .section.section2 button {padding: 10px;  width: 40px;}
+
+            @media screen and (max-width:480px), screen and (max-device-width:480px) {
+                #PageSubscribe { top: 15px;}
+                #PageSubscribe .section{ width: 100%; padding: 10px 0; font-size: 12px;}
+                #PageSubscribe .section.section1 {font-size: 15px;}
+                #PageSubscribe .section.section1 span {font-size: 20px;}
+                #PageSubscribe .section.section3 {font-size: 12px;}
+            }
+
+            .container-fluid {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .row {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        </style>
+
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+  
+        <script type='text/javascript'>
+            //Subscribe
+            function SubscribeSite(){
+                clearTimeout(SubscribeTime);
+
+                var dog = '<img height="70" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-09.png">' +
+                    '<img height="20" align="bottom" src="https://www.kmimos.com.mx/wp-content/uploads/2017/07/propuestas-banner-10.png">';
+
+                var html='<div id="PageSubscribe"><i class="exit fa fa-times" aria-hidden="true" onclick="SubscribePopUp_Close(\'#message.Msubscribe\')"></i>' +
+                    '<div class="section section1"><span>G&aacute;nate <strong>$50 pesos</strong> en tu primera reserva</span><br>&#8216;&#8216;Aplica para clientes nuevos&#8217;&#8217;<div class="images">'+dog+'</div></div>' +
+                    '<div class="section section2"><span><strong>&#161;SUSCR&Iacute;BETE!</strong> y recibe el Newsletter con nuestras <strong>PROMOCIONES, TIPS DE CUIDADOS PARA MASCOTAS,</strong> etc.!</span><?php echo subscribe_input('guarderia-perro'); ?></div>' +
+                    '<div class="section section3">*Dentro de 48 hrs. Te enviaremos v&iacute;a email tu c&uacute;pon de descuento</div>' +
+                    '</div>';
+
+
+                SubscribePopUp_Create(html);
+            }
+
+            jQuery(document).ready(function(e){
+                SubscribeTime = setTimeout(function(){
+                    SubscribeSite();
+                }, 7400);
+            });
+        </script>
+
+<!-- /********************/ -->
+<!-- /********************/ -->
+        <?php wp_head(); ?>
+<!-- /********************/ -->
+<!-- /********************/ -->
+</head>
+
+
 <body class="lp-pom-body ">
 <!-- lp:insertions start body:before -->
 <!-- lp:insertions end body:before -->

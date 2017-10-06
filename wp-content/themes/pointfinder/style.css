@@ -32,6 +32,10 @@
 
 \*------------------------------------*/
 
+#news{
+	display:none!important;
+}
+
 .content-link-header a{
     color:#fff!important;
     font-weight: bold;
