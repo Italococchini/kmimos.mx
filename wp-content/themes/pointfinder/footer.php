@@ -89,8 +89,6 @@
                 $PopUpSection='PopUpBlog';
             }else if(in_array('single-post',$bodyClass)){
                 $PopUpSection='PopUpBlogPost';
-            }else if( array_key_exists('referido', $_GET) ){
-                $PopUpSection= $_GET['referido'] ;
             }
             if( array_key_exists('wlabel',$_SESSION) || array_key_exists('wlabel', $_GET) ){
                 if(array_key_exists('wlabel',$_SESSION)){
@@ -99,6 +97,9 @@
                 }else if(array_key_exists('wlabel',$_GET)){
                     $PopUpSection=$_GET['wlabel'];
                 }
+            }
+            if( array_key_exists('referido', $_GET) ){
+                $PopUpSection= $_GET['referido'] ;
             }
         ?>
 

@@ -1210,6 +1210,17 @@ table {
 
 @media (max-width: 768px){
 
+	.col-xs-12{
+	    z-index:0!important;
+	}
+	.col-xs-12 img{
+	    position: relative!important;
+	    left: 0px!important;
+	}
+	.img-texto-modal{
+	    z-index:3px!important;
+	}
+
 	.nomovil{
 		display: none !important;
 	}

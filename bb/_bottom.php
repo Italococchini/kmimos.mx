@@ -4,20 +4,60 @@
 <!-- Modal -->
 <div class="modal fade" id="modal_info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        	<span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+    
+    <div class="modal-content" style="background: #de163b;">
+      <div class="modal-body text-center" style=" 
+      	background-image: url(img/bolsa.png); 
+      	padding-right:0px;
+      	padding-bottom:0px;
+      	color:white;
+  	    background-size: cover;
+	    background-repeat: no-repeat;">
+    	<div class="modal-header" style="    border-bottom: 0px solid transparent;">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background: transparent;
+			    border: 0px;
+			    right: 12px;
+			    position: absolute;
+			    top: 7px;">
+	        	<img data-dismiss="modal" src="img/cerrar.png" width="40px" height="40px">
+	        </button>
+      	</div>
+  			
+      		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+      			<img src="img/texto.gif" class="img-responsive img-texto-modal" style="position: absolute;
+    left: 65px;">
+      		</div>
+      		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" style="padding-right:0px; text-align:right;">
+      			<img src="img/perro_pata_rosa.png" class="img-responsive pull-right" style="border-radius: 6px;">
+      		</div>
+      		<div class="clearfix"></div>
       </div>
     </div>
+
+
+    <div class="hidden modal-content" style="background: #de163b url(img/);">
+
+      <div class="modal-header" style="    border-bottom: 0px solid transparent;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  
+        style="background: transparent;
+		    border: 0px;
+		    right: 12px;
+		    position: absolute;">
+        	<img data-dismiss="modal" src="img/cerrar.png" width="40px" height="40px">
+        </button>
+      </div>
+      <div class="modal-body">
+      		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      			
+      		</div>
+      		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      			<img src="img/perro_pata_rosa.png" class="img-responsive">
+      		</div>
+      		<div class="clearfix"></div>
+      </div>
+    </div>
+
+
   </div>
 </div>
 
