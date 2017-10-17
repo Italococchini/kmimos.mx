@@ -33,12 +33,23 @@
   	    background-size: cover;
 	    background-repeat: no-repeat;">
     	<div class="modal-header" style="    border-bottom: 0px solid transparent;">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background: transparent;
+	        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background: transparent;
 			    border: 0px;
 			    right: 12px;
 			    position: absolute;
 			    top: 7px;">
 	        	<img data-dismiss="modal" src="img/cerrar.png" width="40px" height="40px">
+	        </button> -->
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="
+			    background: transparent;
+			    border: 0px;
+			    right: 12px;
+			    position: absolute;
+			    top: 7px;
+			    font-size: 30px;
+			    font-weight: bold;
+			    ">
+	        	<img data-dismiss="modal" src="img/close_white.png" width="20px" height="20px">
 	        </button>
       	</div>
   			

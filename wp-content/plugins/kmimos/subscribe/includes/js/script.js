@@ -24,8 +24,22 @@ function form_subscribe(element){
                 vsetTime = setTimeout(function(){
                     message_subscribe(message);
                 }, 5000);
-            }
+                if( data['message'] == "Ha sido Registrado" ){
+                    fbq('track', 'Suscripcion', {
+                        content_name: 'Registro popup México'
+                    });
 
+                    jQuery.post( 
+                        "https://www.kmimos.com.mx/landing-volaris/suscribir_home.php", 
+                        {
+                            "email": jQuery("#mail_suscripcion").val()
+                        }, 
+                        function( data ) {
+                            console.log("Suscripción enviadas");
+                        }
+                    );
+                }
+            }
         }else{
 
 

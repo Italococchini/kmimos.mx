@@ -140,6 +140,7 @@
         }
     });
 
+    /*
     //CARUSEL
     var caroussel = 0;
     jQuery(document).on('click', '#news .action .icon.arrow', function(e){
@@ -167,10 +168,11 @@
             jQuery('#news').insertAfter(jQuery('.vc_row.buscador')).addClass('central');
         }
     });
+    */
 </script>
 
 
-
+<?php /*
 <section id="news">
     <div class="title">
         <div class="contain">
@@ -191,6 +193,7 @@
         </div>
     </div>
 </section>
+*/ ?>
 
 
 <?php
