@@ -226,7 +226,8 @@
 		  	</article>
 			<article class="col-sm-12 col-md-12">
 	    		<div class="conte-serv-1">
-	        		<p>Olv&iacute;date de dejar a tu perrhijo solo en casa o con un cuidador en un <br>parque a la intemperie. Los cuidamos dentro de un hogar.</p>
+	        		<p class="hidden-xs">Olv&iacute;date de dejar a tu perrhijo solo en casa o con un cuidador en un <br>parque a la intemperie. Los cuidamos dentro de un hogar.</p>
+	        		<p class="hidden-lg hidden-md hidden-sm">Olv&iacute;date de dejar a tu perr- <br>hijo solo en casa o con un <br>cuidador en un parque a la <br>intemperie. Los cuidamos <br>dentro de un hogar.</p>
 	    		</div>
 	    		<div class="conte-serv-2">
 	        		<p>Estar&aacute; seguro con <br>cuidadores certificados.</p>  
@@ -247,9 +248,15 @@
 				</article>
 	   	 		<article class="col-sm-12 col-xs-12  colores">
 	   	 			<div class="col-sm-3 col-xs-12  color1">Cobertura de <br> servicios <br>veterinarios</div>
-	   	 			<div class="col-sm-3 col-xs-12 color2">Tu Mejor amigo se <br>queda en la casa del <br>cuidador.</div>
-	   	 			<div class="col-sm-3 col-xs-12 color3">Jugar&aacute; como un <br>Rey en sof&aacute;s, salas o <br>en la cama <br>del cuidador.  </div>
-	   	 			<div class="col-sm-3 col-xs-12 color4">Lo mimamr&aacute;n y <br>cuidar&aacute;n como  en <br>su propia casa.</div>
+	   	 			<div class="col-sm-3 col-xs-12 color2">
+	   	 				<span class="hidden-xs">Tu Mejor amigo se <br>queda en la casa del <br>cuidador.</span>
+	   	 				<span class="hidden-md hidden-sm hidden-lg">Tu Mejor amigo se <br>queda en la casa <br> del cuidador.</span>
+	   	 			</div>
+	   	 			<div class="col-sm-3 col-xs-12 color3">
+	   	 				<span class="hidden-xs">Jugar&aacute; como un <br>Rey en sof&aacute;s, salas o <br>en la cama <br>del cuidador.</span>
+	   	 				<span class="hidden-md hidden-sm hidden-lg">Jugar&aacute; como un <br>Rey en sof&aacute;s, salas<br> o en la cama <br>del cuidador.</span>
+	   	 			</div>
+	   	 			<div class="col-sm-3 col-xs-12 color4">Lo mimar&aacute;n y <br>cuidar&aacute;n como  en <br>su propia casa.</div>
 	   	 		</article>
    	 		</div>
 		</section>  
